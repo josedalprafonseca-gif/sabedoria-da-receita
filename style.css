@@ -1,77 +1,16 @@
-/* Configurações Gerais */
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #f9f9f9;
-    color: #333;
-}
+function openTab(evt, recipeId) {
+    var i, content, tablinks;
 
-h1 {
-    text-align: center;
-    color: #ff6b6b;
-    margin-bottom: 30px;
-}
+    content = document.getElementsByClassName("recipe-content");
+    for (i = 0; i < content.length; i++) {
+        content[i].classList.remove("active");
+    }
 
-/* Menu de Abas */
-.tab-menu {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    border-bottom: 3px solid #ff6b6b;
-    padding-bottom: 5px;
-}
+    tablinks = document.getElementsByClassName("tab-btn");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active");
+    }
 
-.tab-btn {
-    padding: 12px 20px;
-    background: #e0e0e0;
-    border: none;
-    cursor: pointer;
-    border-radius: 8px 8px 0 0;
-    font-weight: bold;
-    transition: background 0.2s, color 0.2s;
-}
-
-.tab-btn:hover {
-    background: #d0d0d0;
-}
-
-.tab-btn.active {
-    background: #ff6b6b;
-    color: white;
-}
-
-/* Cartão da Receita */
-.recipe-content {
-    display: none;
-    background: white;
-    padding: 25px;
-    border-radius: 0 0 8px 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-}
-
-.recipe-content.active {
-    display: block;
-}
-
-.recipe-content h2 {
-    color: #2c3e50;
-    margin-top: 0;
-}
-
-.recipe-content p {
-    font-size: 0.95rem;
-    color: #666;
-    background: #f0f0f0;
-    padding: 8px 12px;
-    border-radius: 5px;
-    display: inline-block;
-}
-
-ul, ol {
-    line-height: 1.8;
-    padding-left: 20px;
-}
-
-li {
-    margin-bottom: 6px;
+    document.getElementById(recipeId).classList.add("active");
+    evt.currentTarget.classList.add("active");
 }
