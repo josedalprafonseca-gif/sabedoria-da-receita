@@ -4,22 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Livro de Receitas</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f9f9f9; }
-        h1 { text-align: center; color: #333; }
-        
-        /* Estilo das Abas */
-        .tab-menu { display: flex; flex-wrap: wrap; gap: 5px; border-bottom: 2px solid #ccc; padding-bottom: 5px; }
-        .tab-btn { padding: 10px 15px; background: #e0e0e0; border: none; cursor: pointer; border-radius: 5px 5px 0 0; font-weight: bold; }
-        .tab-btn:hover { background: #d0d0d0; }
-        .tab-btn.active { background: #ff6b6b; color: white; }
-
-        /* Conteúdo das Receitas */
-        .recipe-content { display: none; background: white; padding: 20px; border-radius: 0 0 5px 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .recipe-content.active { display: block; }
-        
-        ul, ol { line-height: 1.6; }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -27,60 +12,182 @@
 
     <!-- Menu de Abas -->
     <div class="tab-menu">
-        <button class="tab-btn active" onclick="openTab(event, 'rec1')">Bolo de Cenoura</button>
-        <button class="tab-btn" onclick="openTab(event, 'rec2')">Strogonoff</button>
-        <button class="tab-btn" onclick="openTab(event, 'rec3')">Panqueca</button>
-        <button class="tab-btn" onclick="openTab(event, 'rec4')">Mousse de Limão</button>
-        <button class="tab-btn" onclick="openTab(event, 'rec5')">Guacamole</button>
-        <button class="tab-btn" onclick="openTab(event, 'rec6')">Lasanha</button>
-        <button class="tab-btn" onclick="openTab(event, 'rec7')">Omelete</button>
-        <button class="tab-btn" onclick="openTab(event, 'rec8')">Sopa de Legumes</button>
-        <button class="tab-btn" onclick="openTab(event, 'rec9')">Pão de Queijo</button>
-        <button class="tab-btn" onclick="openTab(event, 'rec10')">Limonada Suíça</button>
+        <button class="tab-btn active" onclick="openTab(event, 'rec1')">1. Bolo de Cenoura</button>
+        <button class="tab-btn" onclick="openTab(event, 'rec2')">2. Strogonoff</button>
+        <button class="tab-btn" onclick="openTab(event, 'rec3')">3. Panqueca</button>
+        <button class="tab-btn" onclick="openTab(event, 'rec4')">4. Mousse de Limão</button>
+        <button class="tab-btn" onclick="openTab(event, 'rec5')">5. Guacamole</button>
+        <button class="tab-btn" onclick="openTab(event, 'rec6')">6. Lasanha</button>
+        <button class="tab-btn" onclick="openTab(event, 'rec7')">7. Omelete</button>
+        <button class="tab-btn" onclick="openTab(event, 'rec8')">8. Sopa de Legumes</button>
+        <button class="tab-btn" onclick="openTab(event, 'rec9')">9. Pão de Queijo</button>
+        <button class="tab-btn" onclick="openTab(event, 'rec10')">10. Limonada Suíça</button>
     </div>
 
-    <!-- Conteúdo da Receita 1 -->
+    <!-- Receita 1 -->
     <div id="rec1" class="recipe-content active">
-        <h2>🍰 Bolo de Cenoura com Cobertura de Chocolate</h2>
+        <h2>🍰 Bolo de Cenoura</h2>
         <p><strong>Rendimento:</strong> 8 porções | <strong>Tempo:</strong> 45 min</p>
         <h3>Ingredientes:</h3>
         <ul>
-            <li>3 cenouras médias picadas</li>
-            <li>3 ovos</li>
-            <li>1 xícara de óleo</li>
-            <li>2 xícaras de açúcar</li>
-            <li>2 xícaras de farinha de trigo</li>
-            <li>1 colher (sopa) de fermento em pó</li>
+            <li>3 cenouras médias e 3 ovos</li>
+            <li>1 xícara de óleo e 2 xícaras de açúcar</li>
+            <li>2 xícaras de farinha de trigo e 1 colher (sopa) de fermento</li>
         </ul>
         <h3>Modo de Preparo:</h3>
         <ol>
-            <li>Bata no liquidificador a cenoura, os ovos e o óleo até ficar homogêneo.</li>
-            <li>Em uma tigela, misture o açúcar e a farinha de trigo.</li>
-            <li>Despeje a mistura do liquidificador na tigela e mexa bem. Adicione o fermento delicadamente.</li>
-            <li>Asse em forno preaquecido a 180°C por 40 minutos.</li>
+            <li>Bata a cenoura, os ovos e o óleo no liquidificador.</li>
+            <li>Misture o açúcar e a farinha em uma tigela, junte a mistura e adicione o fermento.</li>
+            <li>Asse a 180°C por 40 minutos.</li>
         </ol>
     </div>
 
-    <!-- Conteúdo da Receita 2 -->
+    <!-- Receita 2 -->
     <div id="rec2" class="recipe-content">
         <h2>🍲 Strogonoff de Frango</h2>
         <p><strong>Rendimento:</strong> 4 porções | <strong>Tempo:</strong> 30 min</p>
         <h3>Ingredientes:</h3>
         <ul>
             <li>500g de peito de frango em cubos</li>
-            <li>1 caixa de creme de leite</li>
-            <li>2 colheres (sopa) de extrato de tomate</li>
-            <li>1 colher (sopa) de ketchup e mostarda</li>
-            <li>Sal e pimenta a gosto</li>
+            <li>1 caixa de creme de leite e 2 colheres de extrato de tomate</li>
+            <li>Ketchup, mostarda, sal e pimenta a gosto</li>
         </ul>
         <h3>Modo de Preparo:</h3>
         <ol>
-            <li>Dore o frango na frigideira temperado com sal e pimenta.</li>
+            <li>Dore o frango temperado na frigideira.</li>
             <li>Adicione o extrato de tomate, ketchup e mostarda.</li>
-            <li>Desligue o fogo e misture o creme de leite antes de servir.</li>
+            <li>Desligue o fogo e misture o creme de leite.</li>
         </ol>
     </div>
 
-    <!-- Duplique os blocos div acima para criar as receitas de 3 a 10 substituindo o id (rec3, rec4...) -->
+    <!-- Receita 3 -->
+    <div id="rec3" class="recipe-content">
+        <h2>🌮 Panqueca de Carne Moída</h2>
+        <p><strong>Rendimento:</strong> 6 porções | <strong>Tempo:</strong> 40 min</p>
+        <h3>Ingredientes:</h3>
+        <ul>
+            <li>Massa: 1 xícara de leite, 1 ovo, 1 xícara de farinha de trigo</li>
+            <li>Recheio: 400g de carne moída refogada com temperos</li>
+        </ul>
+        <h3>Modo de Preparo:</h3>
+        <ol>
+            <li>Bata a massa no liquidificador e doure pequenas porções na frigideira.</li>
+            <li>Recheie com a carne, enrole e sirva com molho por cima.</li>
+        </ol>
+    </div>
 
-   
+    <!-- Receita 4 -->
+    <div id="rec4" class="recipe-content">
+        <h2>🍋 Mousse de Limão</h2>
+        <p><strong>Rendimento:</strong> 6 porções | <strong>Tempo:</strong> 10 min + geladeira</p>
+        <h3>Ingredientes:</h3>
+        <ul>
+            <li>1 lata de leite condensado e 1 caixa de creme de leite</li>
+            <li>1/2 xícara de suco de limão concentrado</li>
+        </ul>
+        <h3>Modo de Preparo:</h3>
+        <ol>
+            <li>Bata tudo no liquidificador até ficar cremoso.</li>
+            <li>Leve à geladeira por pelo menos 2 horas antes de servir.</li>
+        </ol>
+    </div>
+
+    <!-- Receita 5 -->
+    <div id="rec5" class="recipe-content">
+        <h2>🥑 Guacamole Tradicional</h2>
+        <p><strong>Rendimento:</strong> 4 porções | <strong>Tempo:</strong> 15 min</p>
+        <h3>Ingredientes:</h3>
+        <ul>
+            <li>2 abacates maduros amassados</li>
+            <li>1 tomate e 1/2 cebola picados, suco de 1 limão e coentro a gosto</li>
+        </ul>
+        <h3>Modo de Preparo:</h3>
+        <ol>
+            <li>Misture o abacate amassado com o tomate, cebola e coentro.</li>
+            <li>Tempere com suco de limão, azeite e sal. Serve com nachos.</li>
+        </ol>
+    </div>
+
+    <!-- Receita 6 -->
+    <div id="rec6" class="recipe-content">
+        <h2>🍝 Lasanha à Bolognesa</h2>
+        <p><strong>Rendimento:</strong> 6 porções | <strong>Tempo:</strong> 60 min</p>
+        <h3>Ingredientes:</h3>
+        <ul>
+            <li>Massa para lasanha, 500g de carne moída ao molho de tomate</li>
+            <li>300g de queijo muçarela e 300g de presunto</li>
+        </ul>
+        <h3>Modo de Preparo:</h3>
+        <ol>
+            <li>Intercale camadas de molho, massa, presunto e queijo em um refratário.</li>
+            <li>Finalize com queijo e asse a 180°C por 30 minutos.</li>
+        </ol>
+    </div>
+
+    <!-- Receita 7 -->
+    <div id="rec7" class="recipe-content">
+        <h2>🍳 Omelete de Queijo e Ervas</h2>
+        <p><strong>Rendimento:</strong> 1 porção | <strong>Tempo:</strong> 10 min</p>
+        <h3>Ingredientes:</h3>
+        <ul>
+            <li>2 ovos batidos, 1 fatia de queijo picada</li>
+            <li>Sal, pimenta e cheiro-verde a gosto</li>
+        </ul>
+        <h3>Modo de Preparo:</h3>
+        <ol>
+            <li>Despeje os ovos temperados na frigideira untada.</li>
+            <li>Adicione o queijo, dobre ao meio e deixe dourar dos dois lados.</li>
+        </ol>
+    </div>
+
+    <!-- Receita 8 -->
+    <div id="rec8" class="recipe-content">
+        <h2>🥣 Sopa de Legumes</h2>
+        <p><strong>Rendimento:</strong> 4 porções | <strong>Tempo:</strong> 35 min</p>
+        <h3>Ingredientes:</h3>
+        <ul>
+            <li>2 batatas, 1 cenoura e 1 chuchu picados</li>
+            <li>1 litro de caldo de legumes, sal e temperos a gosto</li>
+        </ul>
+        <h3>Modo de Preparo:</h3>
+        <ol>
+            <li>Cozinhe todos os legumes no caldo até ficarem macios.</li>
+            <li>Ajuste o sal e sirva bem quente com cheiro-verde.</li>
+        </ol>
+    </div>
+
+    <!-- Receita 9 -->
+    <div id="rec9" class="recipe-content">
+        <h2>🧀 Pão de Queijo Caseiro</h2>
+        <p><strong>Rendimento:</strong> 15 unidades | <strong>Tempo:</strong> 40 min</p>
+        <h3>Ingredientes:</h3>
+        <ul>
+            <li>500g de polvilho azedo, 2 xícaras de queijo ralado</li>
+            <li>1 xícara de leite, 1/2 xícara de óleo, 2 ovos e sal</li>
+        </ul>
+        <h3>Modo de Preparo:</h3>
+        <ol>
+            <li>Ferva o leite com o óleo e sal. Escalde o polvilho e espere esfriar.</li>
+            <li>Adicione os ovos e o queijo, sove, faça bolinhas e asse a 200°C até dourar.</li>
+        </ol>
+    </div>
+
+    <!-- Receita 10 -->
+    <div id="rec10" class="recipe-content">
+        <h2>🍹 Limonada Suíça</h2>
+        <p><strong>Rendimento:</strong> 2 copos | <strong>Tempo:</strong> 5 min</p>
+        <h3>Ingredientes:</h3>
+        <ul>
+            <li>2 limões cortados sem o miolo branco</li>
+            <li>500ml de água gelada, 3 colheres de leite condensado e gelo</li>
+        </ul>
+        <h3>Modo de Preparo:</h3>
+        <ol>
+            <li>Bata os limões com a água no liquidificador no modo pulsar rapidinho.</li>
+            <li>Coe, volte ao liquidificador com o leite condensado e gelo e bata novamente.</li>
+        </ol>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
