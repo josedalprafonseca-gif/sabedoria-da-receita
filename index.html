@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Livro de Receitas</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f9f9f9; }
+        h1 { text-align: center; color: #333; }
+        
+        /* Estilo das Abas */
+        .tab-menu { display: flex; flex-wrap: wrap; gap: 5px; border-bottom: 2px solid #ccc; padding-bottom: 5px; }
+        .tab-btn { padding: 10px 15px; background: #e0e0e0; border: none; cursor: pointer; border-radius: 5px 5px 0 0; font-weight: bold; }
+        .tab-btn:hover { background: #d0d0d0; }
+        .tab-btn.active { background: #ff6b6b; color: white; }
+
+        /* Conteúdo das Receitas */
+        .recipe-content { display: none; background: white; padding: 20px; border-radius: 0 0 5px 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .recipe-content.active { display: block; }
+        
+        ul, ol { line-height: 1.6; }
+    </style>
+</head>
+<body>
+
+    <h1>📖 Livro de Receitas</h1>
+
+    <!-- Menu de Abas -->
+    <div class="tab-menu">
+        <button class="tab-btn active" onclick="openTab(event, 'rec1')">Bolo de Cenoura</button>
+        <button class="tab-btn" onclick="openTab(event, 'rec2')">Strogonoff</button>
+        <button class="tab-btn" onclick="openTab(event, 'rec3')">Panqueca</button>
+        <button class="tab-btn" onclick="openTab(event, 'rec4')">Mousse de Limão</button>
+        <button class="tab-btn" onclick="openTab(event, 'rec5')">Guacamole</button>
+        <button class="tab-btn" onclick="openTab(event, 'rec6')">Lasanha</button>
+        <button class="tab-btn" onclick="openTab(event, 'rec7')">Omelete</button>
+        <button class="tab-btn" onclick="openTab(event, 'rec8')">Sopa de Legumes</button>
+        <button class="tab-btn" onclick="openTab(event, 'rec9')">Pão de Queijo</button>
+        <button class="tab-btn" onclick="openTab(event, 'rec10')">Limonada Suíça</button>
+    </div>
+
+    <!-- Conteúdo da Receita 1 -->
+    <div id="rec1" class="recipe-content active">
+        <h2>🍰 Bolo de Cenoura com Cobertura de Chocolate</h2>
+        <p><strong>Rendimento:</strong> 8 porções | <strong>Tempo:</strong> 45 min</p>
+        <h3>Ingredientes:</h3>
+        <ul>
+            <li>3 cenouras médias picadas</li>
+            <li>3 ovos</li>
+            <li>1 xícara de óleo</li>
+            <li>2 xícaras de açúcar</li>
+            <li>2 xícaras de farinha de trigo</li>
+            <li>1 colher (sopa) de fermento em pó</li>
+        </ul>
+        <h3>Modo de Preparo:</h3>
+        <ol>
+            <li>Bata no liquidificador a cenoura, os ovos e o óleo até ficar homogêneo.</li>
+            <li>Em uma tigela, misture o açúcar e a farinha de trigo.</li>
+            <li>Despeje a mistura do liquidificador na tigela e mexa bem. Adicione o fermento delicadamente.</li>
+            <li>Asse em forno preaquecido a 180°C por 40 minutos.</li>
+        </ol>
+    </div>
+
+    <!-- Conteúdo da Receita 2 -->
+    <div id="rec2" class="recipe-content">
+        <h2>🍲 Strogonoff de Frango</h2>
+        <p><strong>Rendimento:</strong> 4 porções | <strong>Tempo:</strong> 30 min</p>
+        <h3>Ingredientes:</h3>
+        <ul>
+            <li>500g de peito de frango em cubos</li>
+            <li>1 caixa de creme de leite</li>
+            <li>2 colheres (sopa) de extrato de tomate</li>
+            <li>1 colher (sopa) de ketchup e mostarda</li>
+            <li>Sal e pimenta a gosto</li>
+        </ul>
+        <h3>Modo de Preparo:</h3>
+        <ol>
+            <li>Dore o frango na frigideira temperado com sal e pimenta.</li>
+            <li>Adicione o extrato de tomate, ketchup e mostarda.</li>
+            <li>Desligue o fogo e misture o creme de leite antes de servir.</li>
+        </ol>
+    </div>
+
+    <!-- Duplique os blocos div acima para criar as receitas de 3 a 10 substituindo o id (rec3, rec4...) -->
+
+    <script>
+        function openTab(evt, recipeId) {
+            var i, content, tablinks;
+            content = document.getElementsByClassName("recipe-content");
+            for (i = 0; i < content.length; i++) {
+                content[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(recipeId).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+
+</body>
+</html>
