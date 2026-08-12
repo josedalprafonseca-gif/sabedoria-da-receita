@@ -1,19 +1,61 @@
-function openTab(evt, recipeId) {
-    var i, content, tablinks;
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
 
-    // Esconde todo o conteúdo das receitas
-    content = document.getElementsByClassName("recipe-content");
-    for (i = 0; i < content.length; i++) {
-        content[i].classList.remove("active");
-    }
+h1 {
+    text-align: center;
+    color: #ff6b6b;
+    margin-bottom: 25px;
+}
 
-    // Remove o destaque (classe active) de todos os botões
-    tablinks = document.getElementsByClassName("tab-btn");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].classList.remove("active");
-    }
+.tab-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    border-bottom: 3px solid #ff6b6b;
+    padding-bottom: 5px;
+}
 
-    // Exibe a receita selecionada e destaca o botão clicado
-    document.getElementById(recipeId).classList.add("active");
-    evt.currentTarget.classList.add("active");
+.tab-btn {
+    padding: 10px 16px;
+    background: #e0e0e0;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px 6px 0 0;
+    font-weight: bold;
+}
+
+.tab-btn:hover {
+    background: #d0d0d0;
+}
+
+.tab-btn.active {
+    background: #ff6b6b;
+    color: white;
+}
+
+.recipe-content {
+    display: none;
+    background: white;
+    padding: 20px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+.recipe-content.active {
+    display: block;
+}
+
+.recipe-content p {
+    background: #f0f0f0;
+    padding: 8px 12px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+ul, ol {
+    line-height: 1.8;
 }
